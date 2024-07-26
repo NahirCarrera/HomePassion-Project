@@ -1,3 +1,4 @@
+// src/app/login/page.tsx
 'use client'; // Asegúrate de agregar esta línea al principio del archivo
 
 import { useState } from 'react';
@@ -17,8 +18,9 @@ const LoginPage = () => {
     e.preventDefault();
     setError(''); // Limpiar errores anteriores
     try {
-      await axios.post('/api/login', { email, password });
-      router.push('/tasks'); // Redirige al usuario a la página de inicio o al dashboard
+      const response = await axios.post('/api/login', { email, password });
+      localStorage.setItem('token', response.data.token); // Asegúrate de que el token esté en response.data.token
+      router.push('/user-dashboard'); // Redirige al usuario a la página de inicio o al dashboard
     } catch (error) {
       console.error('Error al iniciar sesión:', error);
       setError('Correo electrónico o contraseña incorrectos.');

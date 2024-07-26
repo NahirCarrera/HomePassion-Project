@@ -300,83 +300,82 @@ const HomePage = () => {
       </Container>
 
       {/* Sección del Catálogo */}
-<Container id="catalog" maxWidth="md" sx={{ mt: 8 }}>
-  <Typography variant="h4" gutterBottom textAlign="center">
-    Catálogo
-  </Typography>
-  <Box
-    sx={{
-      display: 'flex',
-      gap: 4,
-      flexDirection: 'row',
-      flexWrap: 'wrap',
-      justifyContent: 'center',
-    }}
-  >
-    <Button
-      onClick={() => {/* Función para cambiar productos */}}
-      sx={{ mb: 2 }}
-    >
-      Categoría 1
-    </Button>
-    <Button
-      onClick={() => {/* Función para cambiar productos */}}
-      sx={{ mb: 2 }}
-    >
-      Categoría 2
-    </Button>
-    <Button
-      onClick={() => {/* Función para cambiar productos */}}
-      sx={{ mb: 2 }}
-    >
-      Categoría 3
-    </Button>
-  </Box>
-  <Box
-    sx={{
-      display: 'flex',
-      gap: 4,
-      flexDirection: 'row',
-      flexWrap: 'wrap',
-      justifyContent: 'center',
-    }}
-  >
-    {[1, 2, 3].map((product, index) => (
-      <Card key={index} sx={{ width: 345, mb: 4 }}>
-        <Box sx={{ position: 'relative' }}>
-          <CardMedia
-            component="img"
-            height="200"
-            image="/banner-image.jpeg"
-            alt={`Producto ${product}`}
-          />
-          <Box
-            sx={{
-              position: 'absolute',
-              top: 8,
-              left: 8,
-              backgroundColor: 'rgba(0, 0, 0, 0.7)',
-              color: 'white',
-              padding: '2px 8px',
-              borderRadius: '4px',
-            }}
+      <Container id="catalog" maxWidth="md" sx={{ mt: 8 }}>
+        <Typography variant="h4" gutterBottom textAlign="center">
+          Catálogo
+        </Typography>
+        <Box
+          sx={{
+            display: 'flex',
+            gap: 4,
+            flexDirection: 'row',
+            flexWrap: 'wrap',
+            justifyContent: 'center',
+          }}
+        >
+          <Button
+            onClick={() => {/* Función para cambiar productos */}}
+            sx={{ mb: 2 }}
           >
-            $Precio {product}
-          </Box>
+            Categoría 1
+          </Button>
+          <Button
+            onClick={() => {/* Función para cambiar productos */}}
+            sx={{ mb: 2 }}
+          >
+            Categoría 2
+          </Button>
+          <Button
+            onClick={() => {/* Función para cambiar productos */}}
+            sx={{ mb: 2 }}
+          >
+            Categoría 3
+          </Button>
         </Box>
-        <CardContent>
-          <Typography variant="h5" component="div">
-            Producto {product}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            Descripción del producto {product}
-          </Typography>
-        </CardContent>
-      </Card>
-    ))}
-  </Box>
-</Container>
-
+        <Box
+          sx={{
+            display: 'flex',
+            gap: 4,
+            flexDirection: 'row',
+            flexWrap: 'wrap',
+            justifyContent: 'center',
+          }}
+        >
+          {[1, 2, 3].map((product, index) => (
+            <Card key={index} sx={{ width: 345, mb: 4 }}>
+              <Box sx={{ position: 'relative' }}>
+                <CardMedia
+                  component="img"
+                  height="200"
+                  image="/banner-image.jpeg"
+                  alt={`Producto ${product}`}
+                />
+                <Box
+                  sx={{
+                    position: 'absolute',
+                    top: 8,
+                    left: 8,
+                    backgroundColor: 'rgba(0, 0, 0, 0.7)',
+                    color: 'white',
+                    padding: '2px 8px',
+                    borderRadius: '4px',
+                  }}
+                >
+                  $Precio {product}
+                </Box>
+              </Box>
+              <CardContent>
+                <Typography variant="h5" component="div">
+                  Producto {product}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Descripción del producto {product}
+                </Typography>
+              </CardContent>
+            </Card>
+          ))}
+        </Box>
+      </Container>
 
       {/* Sección de Noticias */}
       <Container id="news" maxWidth="md" sx={{ mt: 8 }}>
@@ -462,10 +461,9 @@ const HomePage = () => {
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'space-between',
-            
           }}
         >
-          <Box sx={{ flex: 1 }}>
+          <Box sx={{ flex: 1, pr: 4 }}>
             <Typography variant="h6" gutterBottom>
               Envíanos un mensaje
             </Typography>
@@ -475,13 +473,14 @@ const HomePage = () => {
                 label="Nombre"
                 variant="outlined"
                 margin="normal"
-              
+                sx={{ bgcolor: 'white' }}
               />
               <TextField
                 fullWidth
                 label="Correo Electrónico"
                 variant="outlined"
                 margin="normal"
+                sx={{ bgcolor: 'white' }}
               />
               <TextField
                 fullWidth
@@ -490,8 +489,9 @@ const HomePage = () => {
                 margin="normal"
                 multiline
                 rows={4}
+                sx={{ bgcolor: 'white' }}
               />
-              <Button type="submit" variant="contained" color="primary">
+              <Button type="submit" variant="contained" color="primary" sx={{ mt: 2 }}>
                 Enviar
               </Button>
             </form>
