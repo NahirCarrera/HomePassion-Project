@@ -1,4 +1,3 @@
 module.exports = {
-    default: `--format @cucumber/pretty-formatter`,
-  };
-  
+  default: `--require features/step_definitions/**/*.js --format @cucumber/pretty-formatter`,
+};

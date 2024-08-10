@@ -30,6 +30,11 @@ export default function News() {
     }, []);
 
     const handleAddNews = async () => {
+        // Validación de los campos
+        if (title.trim() === '' || content.trim() === '') {
+            alert('Por favor, completa todos los campos.');
+            return;
+        }
         const token = localStorage.getItem('token');
         const newNews = { title, content };
         const response = await fetch(`${process.env.NEXT_PUBLIC_FASTAPI_URL}/news/`, {
@@ -84,6 +89,11 @@ export default function News() {
     };
 
     const handleDeleteNews = async (id: number) => {
+        const userConfirmed = confirm("Are you sure you want to delete this new?");
+        
+        if (!userConfirmed) {
+            return;
+        }
         const token = localStorage.getItem('token');
         const response = await fetch(`${process.env.NEXT_PUBLIC_FASTAPI_URL}/news/${id}`, {
             method: 'DELETE',

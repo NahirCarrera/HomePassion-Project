@@ -32,6 +32,11 @@ export default function Products() {
     }, []);
 
     const handleAddProduct = async () => {
+        // Validación de los campos
+    if (name.trim() === '' || description.trim() === '' || price === '') {
+        alert('Por favor, completa todos los campos.');
+        return;
+    }
         const token = localStorage.getItem('token');
         const newProduct = { name, description, price };
         const response = await fetch(`${process.env.NEXT_PUBLIC_FASTAPI_URL}/products/`, {
@@ -89,13 +94,19 @@ export default function Products() {
     };
 
     const handleDeleteProduct = async (id: number) => {
+        const userConfirmed = confirm("Are you sure you want to delete this product?");
+        
+        if (!userConfirmed) {
+            return; // If the user cancels, exit the function
+        }
+    
         const token = localStorage.getItem('token');
         const response = await fetch(`${process.env.NEXT_PUBLIC_FASTAPI_URL}/products/${id}`, {
             method: 'DELETE',
             headers: {
                 Authorization: `Bearer ${token}`,
             },
-        });
+        });    
 
         if (response.ok) {
             setProducts(products.filter(p => p.id !== id));
