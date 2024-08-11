@@ -1,25 +1,46 @@
 const { Given, When, Then, After, Before } = require('@cucumber/cucumber');
 const assert = require('assert');
 const puppeteer = require('puppeteer');
+const fs = require('fs');
+const path = require('path');
 
 let browser;
 let page;
+
+// Cambia esto para cada característica
+const featureName = 'comentarios'; // Cambia esto si tienes diferentes nombres de features
+const screenshotsDir = path.join(__dirname, 'screenshots');
+const featureDir = path.join(screenshotsDir, featureName);
+
+// Crea los directorios si no existen
+if (!fs.existsSync(screenshotsDir)) {
+  fs.mkdirSync(screenshotsDir);
+}
+
+if (!fs.existsSync(featureDir)) {
+  fs.mkdirSync(featureDir);
+}
 
 Before(async function () {
   browser = await puppeteer.launch({ headless: false });
   page = await browser.newPage();
   page.setDefaultTimeout(10000); // Aumentar el tiempo de espera
+  this.page = page;
 });
 
 Given('I am on the home page for comments', async function () {
-  // Navega a la página principal
   await this.page.goto('http://localhost:3000'); // Cambia la URL según sea necesario
+
+  // Captura de pantalla en la página de inicio
+  await this.page.screenshot({ path: path.join(featureDir, 'home-page.png') });
 });
 
 When('I navigate to the comments section', async function () {
-  // Haz clic en el enlace o botón que lleva a la sección de comentarios
   await this.page.click('a[href="#comentarios"]'); // Cambia el selector según tu implementación
   await this.page.waitForSelector('#comentarios');
+
+  // Captura de pantalla en la sección de comentarios
+  await this.page.screenshot({ path: path.join(featureDir, 'comments-section.png') });
 });
 
 Then('I should see comments with date, name, rating, and comment', async function () {
@@ -40,8 +61,11 @@ Then('I should see comments with date, name, rating, and comment', async functio
     assert.ok(rating, `Comentario con id ${id} no tiene una calificación`);
     assert.ok(text, `Comentario con id ${id} no tiene un comentario`);
   }
+
+  // Captura de pantalla mostrando los comentarios
+  await this.page.screenshot({ path: path.join(featureDir, 'comments-verified.png') });
 });
 
 After(async function () {
-    await browser.close();
-  });
+  await browser.close();
+});

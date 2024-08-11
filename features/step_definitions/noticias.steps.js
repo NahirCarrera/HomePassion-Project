@@ -1,9 +1,22 @@
 const { Given, When, Then, After, Before } = require('@cucumber/cucumber');
 const assert = require('assert');
 const puppeteer = require('puppeteer');
+const fs = require('fs');
+const path = require('path');
 
 let browser;
 let page;
+const screenshotsDir = path.join(__dirname, 'screenshots');
+const featureName = 'noticias';  // Cambia esto si tienes diferentes nombres de features
+const featureDir = path.join(screenshotsDir, featureName);
+
+if (!fs.existsSync(screenshotsDir)) {
+  fs.mkdirSync(screenshotsDir);
+}
+
+if (!fs.existsSync(featureDir)) {
+  fs.mkdirSync(featureDir);
+}
 
 Before(async function () {
   browser = await puppeteer.launch({ headless: false });
@@ -13,9 +26,10 @@ Before(async function () {
 });
 
 Given('I am on the home page for noticias', async function () {
-    await page.goto('http://localhost:3000', { waitUntil: 'networkidle2' });
-  });
-  
+  await page.goto('http://localhost:3000', { waitUntil: 'networkidle2' });
+  // Captura de pantalla en la página de inicio
+  await page.screenshot({ path: path.join(featureDir, 'home-page.png') });
+});
 
 When('I click on the "Noticias" menu option', async function () {
   await page.waitForSelector('a[href="#noticias"]');
@@ -23,11 +37,15 @@ When('I click on the "Noticias" menu option', async function () {
     page.waitForNavigation(), // Espera a la navegación
     page.click('a[href="#noticias"]')
   ]);
+  // Captura de pantalla después de hacer clic en "Noticias"
+  await page.screenshot({ path: path.join(featureDir, 'click-noticias.png') });
 });
 
 Then('I should be redirected to the "Noticias" section', async function () {
   const section = await page.$('#noticias');
   assert.ok(section, 'No se redirigió a la sección "Noticias"');
+  // Captura de pantalla en la sección "Noticias"
+  await page.screenshot({ path: path.join(featureDir, 'noticias-section.png') });
 });
 
 Then('I should see 3 news items with title, date, description, and image', async function () {
@@ -52,8 +70,12 @@ Then('I should see 3 news items with title, date, description, and image', async
     assert.ok(date, `Noticia ${index + 1} no tiene una fecha`);
     assert.ok(description, `Noticia ${index + 1} no tiene una descripción`);
     assert.ok(image, `Noticia ${index + 1} no tiene una imagen`);
+    
+    // Captura de pantalla para cada noticia
+    await item.screenshot({ path: path.join(featureDir, `news-item-${index + 1}.png`) });
   }
 });
+
 After(async function () {
   await browser.close();
 });
