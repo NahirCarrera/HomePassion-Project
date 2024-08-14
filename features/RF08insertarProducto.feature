@@ -1,4 +1,4 @@
-Feature: Insertar productos en el catálogo como administrador
+Feature: RF08 Insertar productos en el catálogo como administrador
 
   Scenario: Insertar producto correctamente
     Given I am on the products page

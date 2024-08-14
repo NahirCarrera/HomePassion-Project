@@ -1,0 +1,3839 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "rf01-ver-sección-\"sobre-nosotros\";redirigir-a-la-sección-\"sobre-nosotros\"-y-mostrar-la-información-correcta",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "Redirigir a la sección \"Sobre nosotros\" y mostrar la información correcta",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 408414300
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 380936600
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 447212299
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 376144900
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 445423299
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 537752600
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 524520599
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 515961699
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 448090099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I am on the home page for information",
+            "match": {
+              "location": "features\\step_definitions\\informacion.steps.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1499342300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I click on the \"Sobre nosotros\" menu option",
+            "match": {
+              "location": "features\\step_definitions\\informacion.steps.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 347486299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "I should be redirected to the \"Sobre nosotros\" section",
+            "match": {
+              "location": "features\\step_definitions\\informacion.steps.js:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 160369099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I should see the description, history, and values",
+            "match": {
+              "location": "features\\step_definitions\\informacion.steps.js:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 243859400
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 227552599
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 219540199
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 195479299
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 156024500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 186519900
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 139641700
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 178958599
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 152405300
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 160856200
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "rf01-ver-sección-\"sobre-nosotros\"",
+    "line": 3,
+    "keyword": "Feature",
+    "name": "RF01 Ver sección \"Sobre nosotros\"",
+    "tags": [],
+    "uri": "features\\RF01verSeccionInformacion.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "rf02-verificar-sección-de-comentarios;acceder-a-la-sección-de-comentarios-y-verificar-los-detalles-de-los-comentarios",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Acceder a la sección de comentarios y verificar los detalles de los comentarios",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 377996600
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 369266099
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 403317900
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 382889600
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 382021800
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 385501000
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 442237900
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 456075999
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 446380900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the home page for comments",
+            "match": {
+              "location": "features\\step_definitions\\comentarios.steps.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1646739100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I navigate to the comments section",
+            "match": {
+              "location": "features\\step_definitions\\comentarios.steps.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 307311400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I should see comments with name, rating, and comment",
+            "match": {
+              "location": "features\\step_definitions\\comentarios.steps.js:46"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 30230599,
+              "error_message": "Error: Error: failed to find element matching selector \"[data-testid=\"comment-name-0\"]\"\n    at CdpElementHandle.$eval (C:\\Users\\HP\\Desktop\\SEPTIMO SEMESTRE MAYO 24 - SEPTIEMBRE 24\\15463 DESARROLLO WEB AVANZADO\\P2\\PROYECTO\\HomePassion-Project\\node_modules\\puppeteer-core\\lib\\cjs\\puppeteer\\api\\ElementHandle.js:489:27)\n    at async World.<anonymous> (C:\\Users\\HP\\Desktop\\SEPTIMO SEMESTRE MAYO 24 - SEPTIEMBRE 24\\15463 DESARROLLO WEB AVANZADO\\P2\\PROYECTO\\HomePassion-Project\\features\\step_definitions\\comentarios.steps.js:54:18)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 273336999
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 179083500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 155477200
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 155468699
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 173930699
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 147132300
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 169804400
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 154706500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 181354800
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "rf02-verificar-sección-de-comentarios",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "RF02 Verificar sección de comentarios",
+    "tags": [],
+    "uri": "features\\RF02verSeccionComentarios.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "rf03-ver-sección-de-noticias;verificar-la-sección-de-noticias",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Verificar la sección de noticias",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 385462499
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 392993800
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 381126500
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 384413300
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 436577599
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 392568600
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 438279399
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 467619300
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 453659199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the home page for noticias",
+            "match": {
+              "location": "features\\step_definitions\\noticias.steps.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1470204799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I click on the \"Noticias\" menu option",
+            "match": {
+              "location": "features\\step_definitions\\noticias.steps.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 320272700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I should be redirected to the \"Noticias\" section",
+            "match": {
+              "location": "features\\step_definitions\\noticias.steps.js:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 217316900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I should see 3 news items with title, date, description, and image",
+            "match": {
+              "location": "features\\step_definitions\\noticias.steps.js:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22760800
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 207975000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 241008499
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 182229100
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 150850499
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 157258300
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 156567500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 344642100
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 169256099
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 196901699
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "rf03-ver-sección-de-noticias",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "RF03 Ver sección de noticias",
+    "tags": [],
+    "uri": "features\\RF03verSeccionNoticias.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "rf04-filtrado-del-catálogo-de-productos;ver-productos-por-categoría",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Ver productos por categoría",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 372594999
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 373562999
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 392395300
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 382888499
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 407967499
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 385435199
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 448986399
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 457090100
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 485729299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the home page for catalog",
+            "match": {
+              "location": "features\\step_definitions\\filtrarCatalogo.steps.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1476915499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I navigate to the catalog section",
+            "match": {
+              "location": "features\\step_definitions\\filtrarCatalogo.steps.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 329314899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I select the category \"Categoría 1\" from the dropdown",
+            "match": {
+              "location": "features\\step_definitions\\filtrarCatalogo.steps.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 330711900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "I should see only products from category \"Categoría 1\"",
+            "match": {
+              "location": "features\\step_definitions\\filtrarCatalogo.steps.js:66"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 21276299,
+              "error_message": "Error: Error: failed to find element matching selector \".product-category\"\n    at CdpElementHandle.$eval (C:\\Users\\HP\\Desktop\\SEPTIMO SEMESTRE MAYO 24 - SEPTIEMBRE 24\\15463 DESARROLLO WEB AVANZADO\\P2\\PROYECTO\\HomePassion-Project\\node_modules\\puppeteer-core\\lib\\cjs\\puppeteer\\api\\ElementHandle.js:489:27)\n    at async World.<anonymous> (C:\\Users\\HP\\Desktop\\SEPTIMO SEMESTRE MAYO 24 - SEPTIEMBRE 24\\15463 DESARROLLO WEB AVANZADO\\P2\\PROYECTO\\HomePassion-Project\\features\\step_definitions\\filtrarCatalogo.steps.js:71:29)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 233311000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 176501100
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 177297099
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 152385600
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 164570299
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 196182600
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 151650099
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 152080799
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 207337899
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "rf04-filtrado-del-catálogo-de-productos;ver-productos-por-otra-categoría",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "Ver productos por otra categoría",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 369638100
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 385260200
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 393833599
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 394283200
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 407897799
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 405565699
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 410637200
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 486749299
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 448649000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "I am on the home page for catalog",
+            "match": {
+              "location": "features\\step_definitions\\filtrarCatalogo.steps.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1500806100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I navigate to the catalog section",
+            "match": {
+              "location": "features\\step_definitions\\filtrarCatalogo.steps.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 262121199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I select the category \"Categoría 2\" from the dropdown",
+            "match": {
+              "location": "features\\step_definitions\\filtrarCatalogo.steps.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 350412199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I should see only products from category \"Categoría 2\"",
+            "match": {
+              "location": "features\\step_definitions\\filtrarCatalogo.steps.js:66"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 18172899,
+              "error_message": "Error: Error: failed to find element matching selector \".product-category\"\n    at CdpElementHandle.$eval (C:\\Users\\HP\\Desktop\\SEPTIMO SEMESTRE MAYO 24 - SEPTIEMBRE 24\\15463 DESARROLLO WEB AVANZADO\\P2\\PROYECTO\\HomePassion-Project\\node_modules\\puppeteer-core\\lib\\cjs\\puppeteer\\api\\ElementHandle.js:489:27)\n    at async World.<anonymous> (C:\\Users\\HP\\Desktop\\SEPTIMO SEMESTRE MAYO 24 - SEPTIEMBRE 24\\15463 DESARROLLO WEB AVANZADO\\P2\\PROYECTO\\HomePassion-Project\\features\\step_definitions\\filtrarCatalogo.steps.js:71:29)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 209263399
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 186668600
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 164679700
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 162395600
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 140758000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 212420799
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 164745500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 192204400
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 206516199
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "rf04-filtrado-del-catálogo-de-productos",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "RF04 Filtrado del Catálogo de Productos",
+    "tags": [],
+    "uri": "features\\RF04filtrarSeccionCatalogo.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "rf04-ver-productos-en-el-catálogo;acceder-a-la-sección-de-catálogo-y-verificar-los-detalles-de-los-productos",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Acceder a la sección de catálogo y verificar los detalles de los productos",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 387519299
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 329536200
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 429901600
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 386849199
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 387392299
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 409098899
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 425466899
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 452643700
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 463997100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the home page for test products in catalog",
+            "match": {
+              "location": "features\\step_definitions\\verProductos.steps.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1430272699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I navigate to the catalog section for test products",
+            "match": {
+              "location": "features\\step_definitions\\verProductos.steps.js:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 308051100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I should see products with image, title, description, rating, and price",
+            "match": {
+              "location": "features\\step_definitions\\verProductos.steps.js:48"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 29255600,
+              "error_message": "Error: Error: failed to find element matching selector \"[data-testid=\"product-rating-1\"]\"\n    at CdpElementHandle.$eval (C:\\Users\\HP\\Desktop\\SEPTIMO SEMESTRE MAYO 24 - SEPTIEMBRE 24\\15463 DESARROLLO WEB AVANZADO\\P2\\PROYECTO\\HomePassion-Project\\node_modules\\puppeteer-core\\lib\\cjs\\puppeteer\\api\\ElementHandle.js:489:27)\n    at async World.<anonymous> (C:\\Users\\HP\\Desktop\\SEPTIMO SEMESTRE MAYO 24 - SEPTIEMBRE 24\\15463 DESARROLLO WEB AVANZADO\\P2\\PROYECTO\\HomePassion-Project\\features\\step_definitions\\verProductos.steps.js:60:20)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 244761599
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 155043200
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 166073700
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 154764900
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 228537199
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 145272600
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 153965499
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 165326199
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 209061099
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "rf04-ver-productos-en-el-catálogo",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "RF04 Ver productos en el catálogo",
+    "tags": [],
+    "uri": "features\\RF04verProductosCatalogo.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "rf05-buscar-productos-en-el-catálogo;filtrar-productos-por-palabra-clave",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Filtrar productos por palabra clave",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 380692999
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 382072299
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 373642800
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 400670400
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 382514400
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 422783900
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 442138900
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 500554100
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 445268100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the home page for search products",
+            "match": {
+              "location": "features\\step_definitions\\buscarProductos.steps.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1380951300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I navigate to the catalog section for search products",
+            "match": {
+              "location": "features\\step_definitions\\buscarProductos.steps.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 249036299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "I search for a product with the keyword \"Producto 1\"",
+            "match": {
+              "location": "features\\step_definitions\\buscarProductos.steps.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 393332800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "I should see only products that match the keyword \"Producto 1\"",
+            "match": {
+              "location": "features\\step_definitions\\buscarProductos.steps.js:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 151141899
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 261553899
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 178679800
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 179577299
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 167884400
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 164669699
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 156899100
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 175392599
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 167458500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 188332699
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "rf05-buscar-productos-en-el-catálogo;filtrar-productos-por-parte-de-palabra-clave",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "Filtrar productos por parte de palabra clave",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 382965899
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 397490400
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 402990700
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 381203099
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 379568900
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 391825800
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 421913500
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 587325199
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 483010200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "I am on the home page for search products",
+            "match": {
+              "location": "features\\step_definitions\\buscarProductos.steps.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1375246800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I navigate to the catalog section for search products",
+            "match": {
+              "location": "features\\step_definitions\\buscarProductos.steps.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 313597399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I search for a product with the keyword \"Producto\"",
+            "match": {
+              "location": "features\\step_definitions\\buscarProductos.steps.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 360427199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I should see only products that match the keyword \"Producto\"",
+            "match": {
+              "location": "features\\step_definitions\\buscarProductos.steps.js:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 158670899
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 291122100
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 197085500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 167242200
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 154319199
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 166273400
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 153103999
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 164579900
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 168569000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 186956500
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "rf05-buscar-productos-en-el-catálogo;filtrar-productos-con-palabra-clave-inexistente",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Filtrar productos con palabra clave inexistente",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 375501599
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 389610300
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 526944899
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 421079999
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 406872200
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 425028200
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 432695500
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 439463199
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 440268700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 16,
+            "name": "I am on the home page for search products",
+            "match": {
+              "location": "features\\step_definitions\\buscarProductos.steps.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1445913199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I navigate to the catalog section for search products",
+            "match": {
+              "location": "features\\step_definitions\\buscarProductos.steps.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 303342699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "I search for a product with the keyword \"nonexistent\"",
+            "match": {
+              "location": "features\\step_definitions\\buscarProductos.steps.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 366106799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "I should see only products that match the keyword \"nonexistent\"",
+            "match": {
+              "location": "features\\step_definitions\\buscarProductos.steps.js:63"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 64865900,
+              "error_message": "AssertionError [ERR_ASSERTION]: No se encontraron productos que coincidan con la palabra clave \"nonexistent\"\n    + expected - actual\n\n    -false\n    +true\n\n    at World.<anonymous> (C:\\Users\\HP\\Desktop\\SEPTIMO SEMESTRE MAYO 24 - SEPTIEMBRE 24\\15463 DESARROLLO WEB AVANZADO\\P2\\PROYECTO\\HomePassion-Project\\features\\step_definitions\\buscarProductos.steps.js:78:10)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 307665500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 165180099
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 157660499
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 160779099
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 159480499
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 146317300
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 160012000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 181116999
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 194818199
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "rf05-buscar-productos-en-el-catálogo",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "RF05 Buscar productos en el catálogo",
+    "tags": [],
+    "uri": "features\\RF05buscarProductos.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "rf06-enviar-un-mensaje-a-través-de-la-sección-de-contacto;enviar-un-correo-desde-la-sección-de-contacto-con-éxito",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Enviar un correo desde la sección de contacto con éxito",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 387110600
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 369519599
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 373289099
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 391116699
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 390254800
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 403526900
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 438627099
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 489471900
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 499421300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the home page for contact",
+            "match": {
+              "location": "features\\step_definitions\\enviarCorreo.steps.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1510368700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I navigate to the contact section",
+            "match": {
+              "location": "features\\step_definitions\\enviarCorreo.steps.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 293981700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "I fill in the contact form with \"John Doe\", \"john@example.com\", and \"Hello, this is a test message.\"",
+            "match": {
+              "location": "features\\step_definitions\\enviarCorreo.steps.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 814588800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I submit the contact form",
+            "match": {
+              "location": "features\\step_definitions\\enviarCorreo.steps.js:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 163091200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "I should see a success message indicating that the email was sent successfully",
+            "match": {
+              "location": "features\\step_definitions\\enviarCorreo.steps.js:63"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 6343500,
+              "error_message": "AssertionError [ERR_ASSERTION]: No se mostró el mensaje de éxito esperado\n    + expected - actual\n\n    -Somos una empresa dedicada a proporcionar lo mejor en XXXXXXXXXXXX, comprometidos con la satisfacción de nuestros clientes. Con años de experiencia en el sector, nos enorgullece ofrecer productos que destacan por su calidad y durabilidad.\n    +Correo enviado con éxito\n\n    at World.<anonymous> (C:\\Users\\HP\\Desktop\\SEPTIMO SEMESTRE MAYO 24 - SEPTIEMBRE 24\\15463 DESARROLLO WEB AVANZADO\\P2\\PROYECTO\\HomePassion-Project\\features\\step_definitions\\enviarCorreo.steps.js:65:10)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 206155899
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 183613299
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 176803399
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 150057899
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 175830000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 156833899
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 212886000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 182125399
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 186661400
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "rf06-enviar-un-mensaje-a-través-de-la-sección-de-contacto;intentar-enviar-un-correo-con-campos-en-blanco",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Intentar enviar un correo con campos en blanco",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 406233399
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 412549600
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 377824599
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 436366399
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 424858699
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 403532299
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 460368600
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 496254199
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 472717499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "I am on the home page for contact",
+            "match": {
+              "location": "features\\step_definitions\\enviarCorreo.steps.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1565084100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I navigate to the contact section",
+            "match": {
+              "location": "features\\step_definitions\\enviarCorreo.steps.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 295674899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I fill in the contact form with \"\", \"\", and \"\"",
+            "match": {
+              "location": "features\\step_definitions\\enviarCorreo.steps.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 133610100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I submit the contact form",
+            "match": {
+              "location": "features\\step_definitions\\enviarCorreo.steps.js:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 196698300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "I should see an error message indicating that all fields are required",
+            "match": {
+              "location": "features\\step_definitions\\enviarCorreo.steps.js:71"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 6119600,
+              "error_message": "AssertionError [ERR_ASSERTION]: No se mostró el mensaje de error esperado para campos en blanco\n    + expected - actual\n\n    -Somos una empresa dedicada a proporcionar lo mejor en XXXXXXXXXXXX, comprometidos con la satisfacción de nuestros clientes. Con años de experiencia en el sector, nos enorgullece ofrecer productos que destacan por su calidad y durabilidad.\n    +Todos los campos son obligatorios\n\n    at World.<anonymous> (C:\\Users\\HP\\Desktop\\SEPTIMO SEMESTRE MAYO 24 - SEPTIEMBRE 24\\15463 DESARROLLO WEB AVANZADO\\P2\\PROYECTO\\HomePassion-Project\\features\\step_definitions\\enviarCorreo.steps.js:73:10)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 183840299
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 202965700
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 205214800
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 163138200
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 151143500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 150174899
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 207427200
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 141878400
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 189948099
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "rf06-enviar-un-mensaje-a-través-de-la-sección-de-contacto;manejar-un-error-al-enviar-el-correo",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "Manejar un error al enviar el correo",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 446189700
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 401250499
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 382072500
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 418750999
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 406778299
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 433211900
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 471363700
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 499665299
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 470613599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 18,
+            "name": "I am on the home page for contact",
+            "match": {
+              "location": "features\\step_definitions\\enviarCorreo.steps.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1549817100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "I navigate to the contact section",
+            "match": {
+              "location": "features\\step_definitions\\enviarCorreo.steps.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 285698499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "I fill in the contact form with \"Jane Doe\", \"jane@example.com\", and \"This will cause an error.\"",
+            "match": {
+              "location": "features\\step_definitions\\enviarCorreo.steps.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 699017399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "I submit the contact form",
+            "match": {
+              "location": "features\\step_definitions\\enviarCorreo.steps.js:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 149223800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "I should see an error message indicating that the email could not be sent",
+            "match": {
+              "location": "features\\step_definitions\\enviarCorreo.steps.js:79"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 6585300,
+              "error_message": "AssertionError [ERR_ASSERTION]: No se mostró el mensaje de error esperado al enviar el correo\n    + expected - actual\n\n    -Somos una empresa dedicada a proporcionar lo mejor en XXXXXXXXXXXX, comprometidos con la satisfacción de nuestros clientes. Con años de experiencia en el sector, nos enorgullece ofrecer productos que destacan por su calidad y durabilidad.\n    +Error al enviar el correo\n\n    at World.<anonymous> (C:\\Users\\HP\\Desktop\\SEPTIMO SEMESTRE MAYO 24 - SEPTIEMBRE 24\\15463 DESARROLLO WEB AVANZADO\\P2\\PROYECTO\\HomePassion-Project\\features\\step_definitions\\enviarCorreo.steps.js:81:10)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 201675600
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 169161599
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 175248800
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 164290700
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 173935799
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 170703900
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 205808199
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 152381300
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 192430199
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "rf06-enviar-un-mensaje-a-través-de-la-sección-de-contacto",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "RF06 Enviar un mensaje a través de la sección de contacto",
+    "tags": [],
+    "uri": "features\\RF06enviarCorreoContacto.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "rf07-login-de-administrador;login-exitoso-con-credenciales-válidas",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Login exitoso con credenciales válidas",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 390802200
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 366975500
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 373854400
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 382190200
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 430924400
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 408906599
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 433815199
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 517896399
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 449552200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the login page",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1982171600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I submit valid login credentials",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 860817499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I should be redirected to the tasks page",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.js:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 79968699
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 222027300
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 188332500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 242393899
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 155522800
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 164653100
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 159595399
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 171513399
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 150391199
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 196455300
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "rf07-login-de-administrador;login-fallido-por-credenciales-inválidas",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Login fallido por credenciales inválidas",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 392369900
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 373487300
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 375408799
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 373849600
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 379811500
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 407481799
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 442621599
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 474767699
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 471291600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I am on the login page",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2176534299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I submit invalid login credentials",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.js:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 689721200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "I should see an error message",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.js:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 145389699
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 209431100
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 167568700
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 243412000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 164506099
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 160768699
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 147921999
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 146327699
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 147648800
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 210508900
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "rf07-login-de-administrador;login-fallido-por-campos-vacíos",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Login fallido por campos vacíos",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 367398400
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 374034800
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 387773799
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 424193799
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 378488499
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 373791399
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 433072899
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 490437299
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 493764800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "I am on the login page",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1441889999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I submit the login form with empty fields",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.js:72"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 700742599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "I should not be able to submit the form and see validation indicators",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.js:77"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 422347500,
+              "error_message": "AssertionError [ERR_ASSERTION]: El borde del campo de correo electrónico no está marcado como inválido.\n    + expected - actual\n\n    -false\n    +true\n\n    at World.<anonymous> (C:\\Users\\HP\\Desktop\\SEPTIMO SEMESTRE MAYO 24 - SEPTIEMBRE 24\\15463 DESARROLLO WEB AVANZADO\\P2\\PROYECTO\\HomePassion-Project\\features\\step_definitions\\login.steps.js:84:12)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 195415599
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 162704200
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 277089899
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 158186900
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 160830300
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 165866199
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 161922200
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 178659599
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 185422699
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "rf07-login-de-administrador",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "RF07 Login de administrador",
+    "tags": [],
+    "uri": "features\\RF07login.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "rf08-insertar-productos-en-el-catálogo-como-administrador;insertar-producto-correctamente",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Insertar producto correctamente",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 391249400
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 359198499
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 386887600
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 384784100
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 393639899
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 400505599
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 449569100
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 518012499
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 573602700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the products page",
+            "match": {
+              "location": "features\\step_definitions\\insertarProducto.steps.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1623722500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I click on \"agregar-producto\"",
+            "match": {
+              "location": "features\\step_definitions\\insertarProducto.steps.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 301531300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I complete the fields with valid information",
+            "match": {
+              "location": "features\\step_definitions\\insertarProducto.steps.js:53"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 224612600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I click on \"agregar\"",
+            "match": {
+              "location": "features\\step_definitions\\insertarProducto.steps.js:38"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5002183799,
+              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (C:\\Users\\HP\\Desktop\\SEPTIMO SEMESTRE MAYO 24 - SEPTIEMBRE 24\\15463 DESARROLLO WEB AVANZADO\\P2\\PROYECTO\\HomePassion-Project\\node_modules\\@cucumber\\cucumber\\lib\\time.js:54:20)\n    at listOnTimeout (node:internal/timers:573:17)\n    at process.processTimers (node:internal/timers:514:7)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "the new product should be in the products list",
+            "match": {
+              "location": "features\\step_definitions\\insertarProducto.steps.js:67"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 217604999
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 155355300
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 174565300
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 219082600
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 178927599
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 160386300
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 168436399
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 169454100
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 206474199
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "rf08-insertar-productos-en-el-catálogo-como-administrador;cancelar-la-inserción-de-un-producto",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Cancelar la inserción de un producto",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 352869300
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 379108800
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 396198400
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 427707499
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 383343400
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 399443700
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 455843900
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 486004899
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 450346199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "I am on the products page",
+            "match": {
+              "location": "features\\step_definitions\\insertarProducto.steps.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1604609599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I click on \"agregar-producto\"",
+            "match": {
+              "location": "features\\step_definitions\\insertarProducto.steps.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 309912199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I complete the fields with valid information",
+            "match": {
+              "location": "features\\step_definitions\\insertarProducto.steps.js:53"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 357119899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "I click on \"cancelar\"",
+            "match": {
+              "location": "features\\step_definitions\\insertarProducto.steps.js:38"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5011628100,
+              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (C:\\Users\\HP\\Desktop\\SEPTIMO SEMESTRE MAYO 24 - SEPTIEMBRE 24\\15463 DESARROLLO WEB AVANZADO\\P2\\PROYECTO\\HomePassion-Project\\node_modules\\@cucumber\\cucumber\\lib\\time.js:54:20)\n    at listOnTimeout (node:internal/timers:573:17)\n    at process.processTimers (node:internal/timers:514:7)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "the product should not be in the products list",
+            "match": {
+              "location": "features\\step_definitions\\insertarProducto.steps.js:78"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 239504799
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 162246800
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 178516600
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 202808300
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 159636700
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 153840599
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 167475600
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 185186600
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 201482400
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "rf08-insertar-productos-en-el-catálogo-como-administrador;intentar-insertar-un-producto-con-campos-vacíos",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "Intentar insertar un producto con campos vacíos",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 371388600
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 374214899
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 370992599
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 398002699
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 375318700
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 400723200
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 449467000
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 460687200
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 699778699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 18,
+            "name": "I am on the products page",
+            "match": {
+              "location": "features\\step_definitions\\insertarProducto.steps.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1574057499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "I click on \"agregar-producto\"",
+            "match": {
+              "location": "features\\step_definitions\\insertarProducto.steps.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 304577999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "I click on \"agregar\"",
+            "match": {
+              "location": "features\\step_definitions\\insertarProducto.steps.js:38"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5010255899,
+              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (C:\\Users\\HP\\Desktop\\SEPTIMO SEMESTRE MAYO 24 - SEPTIEMBRE 24\\15463 DESARROLLO WEB AVANZADO\\P2\\PROYECTO\\HomePassion-Project\\node_modules\\@cucumber\\cucumber\\lib\\time.js:54:20)\n    at listOnTimeout (node:internal/timers:573:17)\n    at process.processTimers (node:internal/timers:514:7)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "I should see an error message for empty fields",
+            "match": {
+              "location": "features\\step_definitions\\insertarProducto.steps.js:89"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 210964399
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 215160799
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 184018000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 205128599
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 171986900
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 167328300
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 182361499
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 205848400
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 247182700
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "rf08-insertar-productos-en-el-catálogo-como-administrador",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "RF08 Insertar productos en el catálogo como administrador",
+    "tags": [],
+    "uri": "features\\RF08insertarProducto.feature"
+  }
+]

@@ -1,4 +1,4 @@
-Feature: Enviar un mensaje a través de la sección de contacto
+Feature: RF06 Enviar un mensaje a través de la sección de contacto
 
 Scenario: Enviar un correo desde la sección de contacto con éxito
     Given I am on the home page for contact

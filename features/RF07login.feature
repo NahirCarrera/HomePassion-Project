@@ -1,4 +1,4 @@
-Feature: Login de administrador
+Feature: RF07 Login de administrador
 
 Scenario: Login exitoso con credenciales válidas
   Given I am on the login page

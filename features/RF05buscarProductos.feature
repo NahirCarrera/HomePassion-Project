@@ -1,4 +1,4 @@
-Feature: Buscar productos en el catálogo
+Feature: RF05 Buscar productos en el catálogo
 
   Scenario: Filtrar productos por palabra clave
     Given I am on the home page for search products

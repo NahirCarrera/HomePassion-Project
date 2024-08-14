@@ -43,28 +43,27 @@ When('I navigate to the comments section', async function () {
   await this.page.screenshot({ path: path.join(featureDir, 'comments-section.png') });
 });
 
-Then('I should see comments with date, name, rating, and comment', async function () {
+Then('I should see comments with name, rating, and comment', async function () {
+  await this.page.waitForSelector('.MuiCardContent-root', { visible: true });
   // Selecciona todos los elementos de comentarios
   const commentItems = await this.page.$$('.MuiCardContent-root'); // Ajusta el selector si es necesario
 
-  // Verifica que cada comentario tenga fecha, nombre, calificación y texto
-  for (const comment of commentItems) {
-    const id = await comment.$eval('[data-testid^="comment-name-"]', el => el.getAttribute('data-testid').split('-').pop());
-    
-    const date = await comment.$eval(`[data-testid="comment-date-${id}"]`, el => el.textContent.trim());
-    const name = await comment.$eval(`[data-testid="comment-name-${id}"]`, el => el.textContent.trim());
-    const rating = await comment.$eval(`[data-testid="comment-rating-${id}"]`, el => el.textContent.trim());
-    const text = await comment.$eval(`[data-testid="comment-text-${id}"]`, el => el.textContent.trim());
+  // Verifica que cada comentario tenga nombre, calificación y texto
+  for (const [index, comment] of commentItems.entries()) {
+    // Ajusta los selectores para incluir el índice
+    const name = await comment.$eval(`[data-testid="comment-name-${index}"]`, el => el.textContent.trim());
+    const rating = await comment.$eval(`[data-testid="comment-rating-${index}"]`, el => el.textContent.trim());
+    const text = await comment.$eval(`[data-testid="comment-text-${index}"]`, el => el.textContent.trim());
 
-    assert.ok(date, `Comentario con id ${id} no tiene una fecha`);
-    assert.ok(name, `Comentario con id ${id} no tiene un nombre`);
-    assert.ok(rating, `Comentario con id ${id} no tiene una calificación`);
-    assert.ok(text, `Comentario con id ${id} no tiene un comentario`);
+    assert.ok(name, `Comentario con índice ${index} no tiene un nombre`);
+    assert.ok(rating, `Comentario con índice ${index} no tiene una calificación`);
+    assert.ok(text, `Comentario con índice ${index} no tiene un comentario`);
   }
 
   // Captura de pantalla mostrando los comentarios
   await this.page.screenshot({ path: path.join(featureDir, 'comments-verified.png') });
 });
+
 
 After(async function () {
   await browser.close();

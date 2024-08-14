@@ -1,4 +1,4 @@
-Feature: Filtrado del Catálogo de Productos
+Feature: RF04 Filtrado del Catálogo de Productos
 
   Scenario: Ver productos por categoría
     Given I am on the home page for catalog

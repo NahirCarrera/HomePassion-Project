@@ -1,6 +1,6 @@
 # features/verSeccionInformacion.feature
 
-Feature: Ver sección "Sobre nosotros"
+Feature: RF01 Ver sección "Sobre nosotros"
 
   Scenario: Redirigir a la sección "Sobre nosotros" y mostrar la información correcta
     Given I am on the home page for information

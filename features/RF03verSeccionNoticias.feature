@@ -1,4 +1,4 @@
-Feature: Ver sección de noticias
+Feature: RF03 Ver sección de noticias
 
   Scenario: Verificar la sección de noticias
     Given I am on the home page for noticias
