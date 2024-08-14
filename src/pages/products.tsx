@@ -69,6 +69,10 @@ export default function Products() {
     };
 
     const handleUpdateProduct = async () => {
+        if (name.trim() === '' || description.trim() === '' || price === '') {
+            alert('Por favor, completa todos los campos.');
+            return;
+        }
         const token = localStorage.getItem('token');
         const updatedProduct = { name, description, price };
         const response = await fetch(`${process.env.NEXT_PUBLIC_FASTAPI_URL}/products/${editId}`, {
@@ -124,6 +128,11 @@ export default function Products() {
     };
 
     const closeModal = () => {
+        const userConfirmed = confirm("Are you sure you want to cancel?");
+        
+        if (!userConfirmed) {
+            return; // If the user cancels, exit the function
+        }
         setIsModalOpen(false);
     };
 
@@ -132,9 +141,20 @@ export default function Products() {
             <Navbar />
             <Box sx={{ p: 3 }}>
                 <Typography variant="h4">Productos</Typography>
-                <Button variant="contained" color="primary" onClick={openModal} sx={{ mb: 2 }}>
+                <Button
+                    data-testid="agregar-producto"
+                    variant="contained"
+                    color="primary"
+                    onClick={openModal}
+                    sx={{
+                        mb: 2,
+                        '&:hover': {
+                        backgroundColor: 'purple', // Cambia el color de fondo a morado cuando haya hover
+                        },
+                    }}
+                    >
                     Agregar Producto
-                </Button>
+                    </Button>
                 <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2 }}>
                     {products.map(product => (
                         <Card key={product.id} sx={{ maxWidth: 345 }}>
@@ -150,8 +170,24 @@ export default function Products() {
                                 </Typography>
                             </CardContent>
                             <CardActions>
-                                <Button size="small" color="secondary" onClick={() => handleEditProduct(product)}>Editar</Button>
-                                <Button size="small" color="error" onClick={() => handleDeleteProduct(product.id)}>Eliminar</Button>
+                                <Button size="small" color="secondary" onClick={() => handleEditProduct(product)} sx={{
+                        mb: 2,
+                        '&:hover': {
+                        backgroundColor:'purple',
+                        color: 'white' // Cambia el color de fondo a morado cuando haya hover
+                        },
+                    }}
+                                    
+                                    >Editar</Button>
+                                <Button size="small" color="error" onClick={() => handleDeleteProduct(product.id)} sx={{
+                        mb: 2,
+                        '&:hover': {
+                        backgroundColor:'red',
+                        color: 'white' // Cambia el color de fondo a morado cuando haya hover
+                        },
+                    }}
+                                    
+                                    >Eliminar</Button>
                             </CardActions>
                         </Card>
                     ))}
@@ -160,12 +196,13 @@ export default function Products() {
                 <Dialog open={isModalOpen} onClose={closeModal}>
                     <DialogTitle>{editId ? 'Editar Producto' : 'Agregar Producto'}</DialogTitle>
                     <DialogContent>
-                        <TextField
+                                            <TextField
                             label="Nombre"
                             value={name}
                             onChange={(e) => setName(e.target.value)}
                             margin="normal"
                             fullWidth
+                            data-testid="nombre-input"
                         />
                         <TextField
                             label="Descripción"
@@ -173,6 +210,7 @@ export default function Products() {
                             onChange={(e) => setDescription(e.target.value)}
                             margin="normal"
                             fullWidth
+                            data-testid="descripcion-input"
                         />
                         <TextField
                             label="Precio"
@@ -181,11 +219,25 @@ export default function Products() {
                             margin="normal"
                             fullWidth
                             type="number"
+                            data-testid="precio-input"
                         />
+
                     </DialogContent>
                     <DialogActions>
-                        <Button onClick={closeModal} color="secondary">Cancelar</Button>
-                        <Button onClick={editId ? handleUpdateProduct : handleAddProduct} color="primary">
+                        <Button data-testid="cancelar" onClick={closeModal} color="secondary" sx={{
+                        mb: 2,
+                        '&:hover': {
+                        backgroundColor: 'purple',
+                        color: 'white' // Cambia el color de fondo a morado cuando haya hover
+                        },
+                    }}>Cancelar</Button>
+                        <Button data-testid="agregar" onClick={editId ? handleUpdateProduct : handleAddProduct} color="primary" sx={{
+                        mb: 2,
+                        '&:hover': {
+                        backgroundColor:'skyblue',
+                        color: 'white' // Cambia el color de fondo a morado cuando haya hover
+                        },
+                    }}>
                             {editId ? 'Actualizar' : 'Agregar'}
                         </Button>
                     </DialogActions>

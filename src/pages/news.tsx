@@ -65,6 +65,10 @@ export default function News() {
     };
 
     const handleUpdateNews = async () => {
+        if (title.trim() === '' || content.trim() === '') {
+            alert('Por favor, completa todos los campos.');
+            return;
+        }
         const token = localStorage.getItem('token');
         const updatedNews = { title, content };
         const response = await fetch(`${process.env.NEXT_PUBLIC_FASTAPI_URL}/news/${editId}`, {
@@ -117,6 +121,11 @@ export default function News() {
     };
 
     const closeModal = () => {
+        const userConfirmed = confirm("Are you sure you want to cancel?");
+        
+        if (!userConfirmed) {
+            return;
+        }
         setIsModalOpen(false);
     };
 
@@ -125,7 +134,15 @@ export default function News() {
             <Navbar />
             <Box sx={{ p: 3 }}>
                 <Typography variant="h4">Noticias</Typography>
-                <Button variant="contained" color="primary" onClick={openModal} sx={{ mb: 2 }}>
+                <Button variant="contained" color="primary" onClick={openModal} sx={{
+                        mb: 2,
+                        '&:hover': {
+                        backgroundColor:'purple',
+                        color: 'white' // Cambia el color de fondo a morado cuando haya hover
+                        },
+                    }}
+                
+                >
                     Agregar Noticia
                 </Button>
                 <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2 }}>
@@ -140,8 +157,24 @@ export default function News() {
                                 </Typography>
                             </CardContent>
                             <CardActions>
-                                <Button size="small" color="secondary" onClick={() => handleEditNews(newsItem)}>Editar</Button>
-                                <Button size="small" color="error" onClick={() => handleDeleteNews(newsItem.id)}>Eliminar</Button>
+                                <Button size="small" color="secondary" onClick={() => handleEditNews(newsItem)} sx={{
+                        mb: 2,
+                        '&:hover': {
+                        backgroundColor:'purple',
+                        color: 'white' // Cambia el color de fondo a morado cuando haya hover
+                        },
+                    }}
+                                    
+                                    >Editar</Button>
+                                <Button size="small" color="error" onClick={() => handleDeleteNews(newsItem.id)} sx={{
+                        mb: 2,
+                        '&:hover': {
+                        backgroundColor:'red',
+                        color: 'white' // Cambia el color de fondo a morado cuando haya hover
+                        },
+                    }}
+                                    
+                                    >Eliminar</Button>
                             </CardActions>
                         </Card>
                     ))}
@@ -166,8 +199,24 @@ export default function News() {
                         />
                     </DialogContent>
                     <DialogActions>
-                        <Button onClick={closeModal} color="secondary">Cancelar</Button>
-                        <Button onClick={editId ? handleUpdateNews : handleAddNews} color="primary">
+                        <Button onClick={closeModal} color="secondary" sx={{
+                        mb: 2,
+                        '&:hover': {
+                        backgroundColor:'purple',
+                        color: 'white' // Cambia el color de fondo a morado cuando haya hover
+                        },
+                    }}
+                        
+                        >Cancelar</Button>
+                        <Button onClick={editId ? handleUpdateNews : handleAddNews} color="primary" sx={{
+                        mb: 2,
+                        '&:hover': {
+                        backgroundColor:'skyblue',
+                        color: 'white' // Cambia el color de fondo a morado cuando haya hover
+                        },
+                    }}
+                        
+                        >
                             {editId ? 'Actualizar' : 'Agregar'}
                         </Button>
                     </DialogActions>

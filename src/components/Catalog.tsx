@@ -133,8 +133,8 @@ export default function Catalogo() {
                 Producto {selectedProduct}
               </Typography>
               <Typography variant="body1" sx={{ mt: 2 }} data-testid={`dialog-product-description-${selectedProduct}`}>
-                Aquí puedes mostrar más detalles sobre el producto {selectedProduct}.
-                Puedes incluir una imagen, descripción más extensa, especificaciones, etc.
+                Aquí se puede mostrar más detalles sobre el producto {selectedProduct}.
+                
               </Typography>
             </Box>
           )}
