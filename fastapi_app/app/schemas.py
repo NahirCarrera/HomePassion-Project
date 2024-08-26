@@ -1,59 +1,70 @@
 from pydantic import BaseModel
 from typing import Optional
-from datetime import datetime
+from datetime import date
 
-class UserBase(BaseModel):
-    username: str
-    email: str | None = None
-    full_name: str | None = None
-    is_active: bool | None = True
+# SQL Server
+class CustomerBase(BaseModel):
+    customer_name: str
+    customer_email: str
+    customer_phone: str
+    customer_address: str
 
-class UserCreate(UserBase):
-    password: str
+class CustomerFeedbackBase(BaseModel):
+    feedback_text: str
+    feedback_date: str
+    customer_id: int
+    feedback_order: int
 
-class User(UserBase):
-    id: int
+# PostgreSQL
+class ProvinceBase(BaseModel):
+    province_name: str
+
+class CityBase(BaseModel):
+    city_name: str
+    province: int
+
+class PaymentMethodBase(BaseModel):
+    p_method_name: str
+
+class SaleBase(BaseModel):
+    sale_date: str
+    sale_total: float
+    sale_status: str
+    customer: int
+    payment_method: int
+    city: int
+
+# MySQL
+class CampaignBase(BaseModel):
+    campaign_id: int
+    campaign_name: str
+    start_date: date
+    end_date: date
+    total_budget: float
+    promoted_product: int
 
     class Config:
-        from_attributes = True
+        orm_mode = True
+
+class MarketingSpendingBase(BaseModel):
+    m_spending_date: str
+    m_spending_amount: float
+    m_spending_description: str
+    campaign: int
+
+# Oracle
+class CategoryBase(BaseModel):
+    category_name: str
+    category_description: str
 
 class ProductBase(BaseModel):
-    name: str
-    description: str | None = None
-    price: float
-
-class ProductCreate(ProductBase):
-    pass
-
-class Product(ProductBase):
-    id: int
-
-    class Config:
-        from_attributes = True
-
-class NewsBase(BaseModel):
-    title: str
-    content: str | None = None
-
-class NewsCreate(NewsBase):
-    pass
-
-class News(NewsBase):
-    id: int
-
-    class Config:
-        from_attributes = True
-
-class CommentBase(BaseModel):
-    content: str
-
-class CommentCreate(CommentBase):
-    pass
-
-class Comment(CommentBase):
-    id: int
-
-    class Config:
-        from_attributes = True
-
-        
+    product_name: str
+    product_description: str
+    product_price: float
+    product_cost: float
+    product_rating_stars: int
+    category: int
+# Mongo
+class UserBase(BaseModel):
+    user_email: str
+    user_password: str

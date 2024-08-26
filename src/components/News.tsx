@@ -1,67 +1,80 @@
 import { Container, Typography, Grid, Card, CardMedia, CardContent } from '@mui/material';
+import { useEffect, useState } from 'react';
+
+interface Campaign {
+  id: number;
+  name: string;
+  startDate: string;
+  endDate: string;
+  totalBudget: number | undefined; // Permitir undefined para manejar posibles valores no definidos
+}
 
 const News = () => {
-  const newsItems = [
-    {
-      title: 'Noticia 1',
-      date: '01/01/2024',
-      description: 'Detalles de la noticia 1 que pueden incluir una descripción breve pero informativa sobre los aspectos más relevantes del evento.',
-      imageUrl: '/banner-image.jpeg',
-    },
-    {
-      title: 'Noticia 2',
-      date: '02/01/2024',
-      description: 'Detalles de la noticia 2 con una breve descripción, permitiendo a los lectores obtener una visión general rápida y fácil de comprender.',
-      imageUrl: '/banner-image.jpeg',
-    },
-    {
-      title: 'Noticia 3',
-      date: '03/01/2024',
-      description: 'Detalles de la noticia 3 que ofrece a los lectores una descripción rápida del contenido relevante y mantiene su interés.',
-      imageUrl: '/banner-image.jpeg',
-    },
-  ];
+  const [campaigns, setCampaigns] = useState<Campaign[]>([]);
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    fetch(`${process.env.NEXT_PUBLIC_FASTAPI_URL}/campaigns/`, {
+        headers: {
+            Authorization: `Bearer ${token}`,
+        },
+    })
+        .then(response => response.json())
+        .then(data => {
+            // Mapear datos a la estructura de Campaign
+            const formattedData = data.map((campaign: any) => ({
+                id: campaign.campaign_id,
+                name: campaign.campaign_name,
+                startDate: campaign.start_date,
+                endDate: campaign.end_date,
+                totalBudget: campaign.total_budget,
+            }));
+            console.log(formattedData); // Verifica la estructura aquí
+            setCampaigns(formattedData);
+        })
+        .catch(error => console.error('Error fetching campaigns:', error));
+}, []);
 
   return (
     <Container id="noticias" maxWidth="lg" sx={{ mt: 8 }}>
       <Typography variant="h4" gutterBottom textAlign="center" sx={{ fontWeight: 'bold', mb: 4 }}>
-        Noticias
+        Campañas
       </Typography>
       <Grid container spacing={4}>
-        {newsItems.map((news, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index}>
+        {campaigns.map((campaign) => (
+          <Grid item xs={12} sm={6} md={4} key={campaign.id}>
             <Card sx={{ boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', borderRadius: '8px' }}>
-            <CardMedia
+              <CardMedia
                 component="img"
                 height="180"
-                image={news.imageUrl}
-                alt={`Noticia ${index + 1}`}
+                image="/banner-image.jpeg" // Reemplaza esto con una imagen específica si está disponible
+                alt={`Campaña ${campaign.name}`}
                 sx={{ borderRadius: '8px 8px 0 0' }}
-                data-testid={`news-image-${index}`}
+                data-testid={`campaign-image-${campaign.id}`}
               />
               <CardContent>
-                <Typography 
-                  variant="h6" 
-                  component="div" 
+                <Typography
+                  variant="h6"
+                  component="div"
                   sx={{ fontWeight: 'bold', mb: 1 }}
-                  data-testid={`news-title-${index}`}
+                  data-testid={`campaign-name-${campaign.id}`}
                 >
-                  {news.title}
+                  {campaign.name}
                 </Typography>
-                <Typography 
-                  variant="body2" 
-                  color="text.secondary" 
-                  sx={{ mb: 2 }}
-                  data-testid={`news-date-${index}`}
-                >
-                  Fecha: {news.date}
-                </Typography>
-                <Typography 
-                  variant="body2" 
+                <Typography
+                  variant="body2"
                   color="text.secondary"
-                  data-testid={`news-description-${index}`}
+                  sx={{ mb: 2 }}
+                  data-testid={`campaign-dates-${campaign.id}`}
                 >
-                  {news.description}
+                  Desde: {new Date(campaign.startDate).toLocaleDateString()} - Hasta: {new Date(campaign.endDate).toLocaleDateString()}
+                </Typography>
+                <Typography
+                  variant="body2"
+                  color="text.secondary"
+                  data-testid={`campaign-budget-${campaign.id}`}
+                >
+                  Presupuesto: ${campaign.totalBudget !== undefined ? campaign.totalBudget.toFixed(2) : 'N/A'}
                 </Typography>
               </CardContent>
             </Card>

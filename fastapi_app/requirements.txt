@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+sqlalchemy
+pydantic
+pymssql
+psycopg2-binary
+mysql-connector-python
+cx_Oracle
+pymongo

@@ -1,11 +1,46 @@
 import { Container, Typography, Box, Card, CardContent } from '@mui/material';
+import { useState, useEffect } from 'react';
+
+interface Feedback {
+  feedback_id: number;
+  feedback_text: string;
+  feedback_date: string;
+  customer_id: number;
+  feedback_order: number;
+}
 
 const Comments = () => {
-  const comments = [
-    { name: 'Cliente 1', rating: '★★★★☆', comment: 'Comentario del cliente 1.' },
-    { name: 'Cliente 2', rating: '★★★☆☆', comment: 'Comentario del cliente 2.' },
-    { name: 'Cliente 3', rating: '★★★☆☆', comment: 'Comentario del cliente 3.' },
-  ];
+  const [comments, setComments] = useState<Feedback[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchComments = async () => {
+      try {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_FASTAPI_URL}/feedback/`);
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data: Feedback[] = await response.json();
+        setComments(data);
+      } catch (error) {
+        console.error('Error fetching comments:', error);
+        setError('Failed to fetch comments');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchComments();
+  }, []);
+
+  if (loading) {
+    return <Typography variant="h6" textAlign="center">Cargando comentarios...</Typography>;
+  }
+
+  if (error) {
+    return <Typography variant="h6" textAlign="center" color="error">{error}</Typography>;
+  }
 
   return (
     <Container id="comentarios" maxWidth="md" sx={{ mt: 8 }}>
@@ -24,31 +59,31 @@ const Comments = () => {
           justifyContent: 'center',
         }}
       >
-        {comments.map((comment, index) => (
-          <Card key={index} sx={{ maxWidth: 345 }}>
+        {comments.map((comment) => (
+          <Card key={comment.feedback_id} sx={{ maxWidth: 345 }}>
             <CardContent>
-      <Typography 
-        variant="h5" 
-        component="div" 
-        data-testid={`comment-name-${index}`}
-      >
-        {comment.name}
-      </Typography>
-      <Typography 
-        variant="body2" 
-        color="text.secondary" 
-        data-testid={`comment-rating-${index}`}
-      >
-        {comment.rating}
-      </Typography>
-      <Typography 
-        variant="body2" 
-        color="text.secondary" 
-        data-testid={`comment-text-${index}`}
-      >
-        {comment.comment}
-      </Typography>
-    </CardContent>
+              <Typography 
+                variant="h5" 
+                component="div" 
+                data-testid={`comment-name-${comment.feedback_id}`}
+              >
+                Cliente {comment.customer_id}
+              </Typography>
+              <Typography 
+                variant="body2" 
+                color="text.secondary" 
+                data-testid={`comment-date-${comment.feedback_id}`}
+              >
+                Fecha: {new Date(comment.feedback_date).toLocaleDateString()}
+              </Typography>
+              <Typography 
+                variant="body2" 
+                color="text.secondary" 
+                data-testid={`comment-text-${comment.feedback_id}`}
+              >
+                {comment.feedback_text}
+              </Typography>
+            </CardContent>
           </Card>
         ))}
       </Box>
