@@ -25,7 +25,7 @@ def create_customer(customer: CustomerBase, db: Session = Depends(get_db)):
 
 # Read all customers
 @router.get("/", response_model=list[CustomerBase])
-def read_customers(skip: int = 0, limit: int = 10, db: Session = Depends(get_db)):
+def read_customers(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     # Specify the ordering column; using `Customer.customer_id` as an example
     return db.query(Customer).order_by(asc(Customer.customer_id)).offset(skip).limit(limit).all()
 

@@ -1,14 +1,18 @@
 import { useEffect, useState } from 'react';
 import { Button, Typography, Box, TextField, Card, CardContent, CardActions, Dialog, DialogTitle, DialogContent, DialogActions, MenuItem, Select, InputLabel, FormControl } from '@mui/material';
 import Navbar from '../components/Navbar';
+import ReactMapGL, { Marker, Popup, Source, Layer } from 'react-map-gl';
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 interface Sale {
-    sale_date: string; // Formato 'YYYY-MM-DD'
+    sale_date: string;
     sale_total: number;
     sale_status: string;
-    customer: number; // ID del cliente
-    payment_method: number; // ID del método de pago
-    city: number; // ID de la ciudad
+    customer: number;
+    payment_method: number;
+    city: number;
+    latitude: number;
+    longitude: number;
 }
 
 interface Customer {
@@ -24,7 +28,11 @@ interface PaymentMethod {
 interface City {
     city_id: number;
     city_name: string;
+    latitude: number;
+    longitude: number;
 }
+
+const MAPBOX_TOKEN = 'pk.eyJ1IjoibmRjYXJyZXJhMiIsImEiOiJjbTBnOWRhMXUxNDJvMmlvZW91b3hzNTZqIn0.Ps2OFJhOdFi_E2cFwhXR1g';
 
 export default function Sales() {
     const [sales, setSales] = useState<Sale[]>([]);
@@ -218,6 +226,10 @@ export default function Sales() {
         setIsModalOpen(false);
     };
 
+    // Filter sales to get unique cities where sales occurred
+    const salesCities = Array.from(new Set(sales.map(sale => sale.city)));
+    const citiesWithSales = cities.filter(city => salesCities.includes(city.city_id));
+
     return (
         <>
             <Navbar />
@@ -252,122 +264,122 @@ export default function Sales() {
                                         Estado: {sale.sale_status}
                                     </Typography>
                                     <Typography variant="body2" color="text.secondary">
-                                        Cliente ID: {sale.customer}
+                                        Cliente: {customers.find(c => c.customer_id === sale.customer)?.customer_name || 'Desconocido'}
                                     </Typography>
                                     <Typography variant="body2" color="text.secondary">
-                                        Método de Pago ID: {sale.payment_method}
+                                        Método de Pago: {paymentMethods.find(pm => pm.payment_method_id === sale.payment_method)?.payment_method_name || 'Desconocido'}
                                     </Typography>
                                     <Typography variant="body2" color="text.secondary">
-                                        Ciudad ID: {sale.city}
+                                        Ciudad: {cities.find(c => c.city_id === sale.city)?.city_name || 'Desconocido'}
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
-                                    <Button size="small" color="secondary" onClick={() => handleEditSale(sale)} sx={{
-                                        mb: 2,
-                                        '&:hover': {
-                                            backgroundColor: 'purple',
-                                            color: 'white'
-                                        },
-                                    }}>Editar</Button>
-                                    <Button size="small" color="error" onClick={() => handleDeleteSale(sale.sale_date)} sx={{
-                                        mb: 2,
-                                        '&:hover': {
-                                            backgroundColor: 'purple',
-                                            color: 'white'
-                                        },
-                                    }}>Eliminar</Button>
+                                    <Button size="small" onClick={() => handleEditSale(sale)}>Editar</Button>
+                                    <Button size="small" color="error" onClick={() => handleDeleteSale(sale.sale_date)}>Eliminar</Button>
                                 </CardActions>
                             </Card>
                         ))
                     ) : (
-                        <Typography variant="body1">No hay ventas registradas.</Typography>
+                        <Typography>No hay ventas registradas.</Typography>
                     )}
                 </Box>
+                <Dialog open={isModalOpen} onClose={closeModal}>
+                    <DialogTitle>{editSaleId ? 'Editar Venta' : 'Agregar Venta'}</DialogTitle>
+                    <DialogContent>
+                        <TextField
+                            autoFocus
+                            margin="dense"
+                            label="Fecha"
+                            type="date"
+                            fullWidth
+                            variant="standard"
+                            value={saleDate}
+                            onChange={(e) => setSaleDate(e.target.value)}
+                        />
+                        <TextField
+                            margin="dense"
+                            label="Total"
+                            type="number"
+                            fullWidth
+                            variant="standard"
+                            value={saleTotal}
+                            onChange={(e) => setSaleTotal(Number(e.target.value))}
+                        />
+                        <TextField
+                            margin="dense"
+                            label="Estado"
+                            fullWidth
+                            variant="standard"
+                            value={saleStatus}
+                            onChange={(e) => setSaleStatus(e.target.value)}
+                        />
+                        <FormControl fullWidth margin="dense">
+                            <InputLabel>Cliente</InputLabel>
+                            <Select
+                                value={customerId}
+                                onChange={(e) => setCustomerId(Number(e.target.value))}
+                            >
+                                {customers.map(customer => (
+                                    <MenuItem key={customer.customer_id} value={customer.customer_id}>
+                                        {customer.customer_name}
+                                    </MenuItem>
+                                ))}
+                            </Select>
+                        </FormControl>
+                        <FormControl fullWidth margin="dense">
+                            <InputLabel>Método de Pago</InputLabel>
+                            <Select
+                                value={paymentMethodId}
+                                onChange={(e) => setPaymentMethodId(Number(e.target.value))}
+                            >
+                                {paymentMethods.map(method => (
+                                    <MenuItem key={method.payment_method_id} value={method.payment_method_id}>
+                                        {method.payment_method_name}
+                                    </MenuItem>
+                                ))}
+                            </Select>
+                        </FormControl>
+                        <FormControl fullWidth margin="dense">
+                            <InputLabel>Ciudad</InputLabel>
+                            <Select
+                                value={cityId}
+                                onChange={(e) => setCityId(Number(e.target.value))}
+                            >
+                                {cities.map(city => (
+                                    <MenuItem key={city.city_id} value={city.city_id}>
+                                        {city.city_name}
+                                    </MenuItem>
+                                ))}
+                            </Select>
+                        </FormControl>
+                    </DialogContent>
+                    <DialogActions>
+                        <Button onClick={closeModal}>Cancelar</Button>
+                        <Button onClick={editSaleId ? handleUpdateSale : handleAddSale}>
+                            {editSaleId ? 'Actualizar' : 'Agregar'}
+                        </Button>
+                    </DialogActions>
+                </Dialog>
             </Box>
-            <Dialog open={isModalOpen} onClose={closeModal}>
-                <DialogTitle>Agregar/Editar Venta</DialogTitle>
-                <DialogContent>
-                    <TextField
-                        label="Fecha de Venta"
-                        type="date"
-                        value={saleDate}
-                        onChange={e => setSaleDate(e.target.value)}
-                        InputLabelProps={{
-                            shrink: true,
-                        }}
-                        fullWidth
-                        margin="normal"
-                    />
-                    <TextField
-                        label="Total de Venta"
-                        type="number"
-                        value={saleTotal}
-                        onChange={e => setSaleTotal(Number(e.target.value))}
-                        fullWidth
-                        margin="normal"
-                    />
-                    <TextField
-                        label="Estado de Venta"
-                        value={saleStatus}
-                        onChange={e => setSaleStatus(e.target.value)}
-                        fullWidth
-                        margin="normal"
-                    />
-                    <FormControl fullWidth margin="normal">
-                        <InputLabel>Cliente</InputLabel>
-                        <Select
-                            value={customerId}
-                            onChange={e => setCustomerId(Number(e.target.value))}
-                            label="Cliente"
-                        >
-                            {customers.map(customer => (
-                                <MenuItem key={customer.customer_id} value={customer.customer_id}>
-                                    {customer.customer_name}
-                                </MenuItem>
-                            ))}
-                        </Select>
-                    </FormControl>
-                    <FormControl fullWidth margin="normal">
-                        <InputLabel>Método de Pago</InputLabel>
-                        <Select
-                            value={paymentMethodId}
-                            onChange={e => setPaymentMethodId(Number(e.target.value))}
-                            label="Método de Pago"
-                        >
-                            {paymentMethods.map(method => (
-                                <MenuItem key={method.payment_method_id} value={method.payment_method_id}>
-                                    {method.payment_method_name}
-                                </MenuItem>
-                            ))}
-                        </Select>
-                    </FormControl>
-                    <FormControl fullWidth margin="normal">
-                        <InputLabel>Ciudad</InputLabel>
-                        <Select
-                            value={cityId}
-                            onChange={e => setCityId(Number(e.target.value))}
-                            label="Ciudad"
-                        >
-                            {cities.map(city => (
-                                <MenuItem key={city.city_id} value={city.city_id}>
-                                    {city.city_name}
-                                </MenuItem>
-                            ))}
-                        </Select>
-                    </FormControl>
-                </DialogContent>
-                <DialogActions>
-                    <Button onClick={closeModal} color="primary">
-                        Cancelar
-                    </Button>
-                    <Button
-                        onClick={editSaleId === null ? handleAddSale : handleUpdateSale}
-                        color="primary"
-                    >
-                        {editSaleId === null ? 'Agregar' : 'Actualizar'}
-                    </Button>
-                </DialogActions>
-            </Dialog>
+
+            <Box sx={{ height: '500px', width: '100%' }}>
+                <ReactMapGL
+                    mapboxAccessToken={MAPBOX_TOKEN}
+                    initialViewState={{
+                        latitude: 40.7128,
+                        longitude: -74.0060,
+                        zoom: 10
+                    }}
+                    style={{ width: '100%', height: '100%' }}
+                    mapStyle="mapbox://styles/mapbox/streets-v11"
+                >
+                    {citiesWithSales.map((city) => (
+                        <Marker key={city.city_id} latitude={city.latitude} longitude={city.longitude}>
+                            <div style={{ color: 'red' }}>📍</div>
+                        </Marker>
+                    ))}
+                </ReactMapGL>
+            </Box>
         </>
     );
 }

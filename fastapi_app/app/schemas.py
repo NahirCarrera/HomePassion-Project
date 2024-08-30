@@ -1,6 +1,7 @@
 from pydantic import BaseModel
-from typing import Optional
+from typing import Optional, Dict
 from datetime import date
+from pydantic.networks import AnyUrl
 
 # SQL Server
 class CustomerBase(BaseModel):
@@ -20,8 +21,13 @@ class ProvinceBase(BaseModel):
     province_name: str
 
 class CityBase(BaseModel):
+    city_id: Optional[int] = None
     city_name: str
-    province: int
+    province: Optional[int] = None
+    location: Optional[Dict] = None  # GeoJSON
+
+    class Config:
+        orm_mode = True
 
 class PaymentMethodBase(BaseModel):
     p_method_name: str

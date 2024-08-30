@@ -1,5 +1,8 @@
 from sqlalchemy import Column, Integer, String, Text, DECIMAL, TIMESTAMP, ForeignKey, Identity, Float, Date
 from sqlalchemy.ext.declarative import declarative_base
+from geoalchemy2 import Geography, WKTElement
+from geoalchemy2.shape import to_shape
+from shapely.geometry import mapping, shape
 
 Base = declarative_base()
 
@@ -22,18 +25,27 @@ class CustomerFeedback(Base):
 
 # PostgreSQL
 class Province(Base):
-    __tablename__ = "PROVINCES"
+    __tablename__ = "provinces"
     province_id = Column(Integer, primary_key=True, index=True)
     province_name = Column(String(255))
 
 class City(Base):
-    __tablename__ = "CITIES"
-    city_id = Column(Integer, primary_key=True, index=True)
-    city_name = Column(String(255))
-    province = Column(Integer, ForeignKey("PROVINCES.province_id"))
+    __tablename__ = 'cities'
+
+    city_id = Column(Integer, primary_key=True, autoincrement=True)
+    city_name = Column(String(255), nullable=False)
+    province = Column(Integer, ForeignKey('provinces.province_id'))
+    location = Column(Geography(geometry_type='POINT', srid=4326))
+
+    @property
+    def location_as_geojson(self):
+        if self.location:
+            shape_obj = to_shape(self.location)
+            return mapping(shape_obj)
+        return None
 
 class PaymentMethod(Base):
-    __tablename__ = "PAYMENT_METHODS"
+    __tablename__ = "payment_methods"
     payment_method_id = Column(Integer, primary_key=True, index=True)
     p_method_name = Column(String(255))
 

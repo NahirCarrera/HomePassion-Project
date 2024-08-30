@@ -9,6 +9,7 @@ import Contact from '../components/Contact';
 import Comments from '../components/Comments';
 import Services from '../components/Services';
 import Shipping from '../components/Shipping';
+import 'leaflet/dist/leaflet.css';
 const HomePage = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>

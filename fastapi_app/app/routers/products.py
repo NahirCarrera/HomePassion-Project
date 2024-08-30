@@ -24,7 +24,7 @@ def create_product(product: ProductBase, db: Session = Depends(get_db)):
 
 # Read all products
 @router.get("/", response_model=list[ProductBase])
-def read_products(skip: int = 0, limit: int = 10, db: Session = Depends(get_db)):
+def read_products(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     products = db.query(Product).offset(skip).limit(limit).all()
     return products
 
