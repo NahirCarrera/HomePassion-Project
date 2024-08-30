@@ -1,5 +1,6 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
+from sqlalchemy import asc
 from ..database import SessionLocal_sqlserver
 from ..models import Customer
 from ..schemas import CustomerBase
@@ -25,7 +26,8 @@ def create_customer(customer: CustomerBase, db: Session = Depends(get_db)):
 # Read all customers
 @router.get("/", response_model=list[CustomerBase])
 def read_customers(skip: int = 0, limit: int = 10, db: Session = Depends(get_db)):
-    return db.query(Customer).offset(skip).limit(limit).all()
+    # Specify the ordering column; using `Customer.customer_id` as an example
+    return db.query(Customer).order_by(asc(Customer.customer_id)).offset(skip).limit(limit).all()
 
 # Read a specific customer by ID
 @router.get("/{customer_id}", response_model=CustomerBase)
@@ -41,7 +43,7 @@ def update_customer(customer_id: int, customer: CustomerBase, db: Session = Depe
     db_customer = db.query(Customer).filter(Customer.customer_id == customer_id).first()
     if db_customer is None:
         raise HTTPException(status_code=404, detail="Customer not found")
-    for key, value in customer.dict().items():
+    for key, value in customer.dict(exclude_unset=True).items():
         setattr(db_customer, key, value)
     db.commit()
     db.refresh(db_customer)

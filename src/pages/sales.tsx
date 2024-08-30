@@ -69,7 +69,7 @@ export default function Sales() {
             .catch(error => console.error('Error fetching customers:', error));
 
         // Fetch payment methods
-        fetch(`${process.env.NEXT_PUBLIC_FASTAPI_URL}/payment-methods/`, {
+        fetch(`${process.env.NEXT_PUBLIC_FASTAPI_URL}/methods/`, {
             headers: {
                 Authorization: `Bearer ${token}`,
             },
@@ -134,7 +134,6 @@ export default function Sales() {
         setCustomerId(sale.customer);
         setPaymentMethodId(sale.payment_method);
         setCityId(sale.city);
-        setEditSaleId(sale.sale_date);
         setIsModalOpen(true);
     };
 

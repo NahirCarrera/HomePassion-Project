@@ -1,4 +1,4 @@
-import { Container, Typography, Box, Card, CardContent } from '@mui/material';
+import { Container, Typography, Box, List, ListItem, ListItemText, Divider } from '@mui/material';
 import { useState, useEffect } from 'react';
 
 interface Feedback {
@@ -52,40 +52,53 @@ const Comments = () => {
       </Typography>
       <Box
         sx={{
-          display: 'flex',
-          gap: 4,
-          flexDirection: 'row',
-          flexWrap: 'wrap',
-          justifyContent: 'center',
+          backgroundColor: 'background.paper',
+          borderRadius: 2,
+          boxShadow: 3,
+          p: 2,
+          mb: 2
         }}
       >
-        {comments.map((comment) => (
-          <Card key={comment.feedback_id} sx={{ maxWidth: 345 }}>
-            <CardContent>
-              <Typography 
-                variant="h5" 
-                component="div" 
-                data-testid={`comment-name-${comment.feedback_id}`}
-              >
-                Cliente {comment.customer_id}
-              </Typography>
-              <Typography 
-                variant="body2" 
-                color="text.secondary" 
-                data-testid={`comment-date-${comment.feedback_id}`}
-              >
-                Fecha: {new Date(comment.feedback_date).toLocaleDateString()}
-              </Typography>
-              <Typography 
-                variant="body2" 
-                color="text.secondary" 
-                data-testid={`comment-text-${comment.feedback_id}`}
-              >
-                {comment.feedback_text}
-              </Typography>
-            </CardContent>
-          </Card>
-        ))}
+        <List>
+          {comments.map((comment) => (
+            <ListItem 
+              key={comment.feedback_id} 
+              divider
+              sx={{
+                backgroundColor: 'white',
+                borderRadius: 2,
+                boxShadow: 1,
+                mb: 2,
+                p: 2
+              }}
+            >
+              <ListItemText
+               primary={
+                <Typography variant="h6" color="text.primary">
+                  Cliente {comment.customer_id}
+                </Typography>
+              }
+                secondary={
+                  <>
+                    <Typography 
+                      variant="body2" 
+                      color="text.secondary"
+                    >
+                      Fecha: {new Date(comment.feedback_date).toLocaleDateString()}
+                    </Typography>
+                    <Typography 
+                      variant="body2" 
+                      color="text.primary"
+                      sx={{ mt: 1 }}
+                    >
+                      {comment.feedback_text}
+                    </Typography>
+                  </>
+                }
+              />
+            </ListItem>
+          ))}
+        </List>
       </Box>
     </Container>
   );

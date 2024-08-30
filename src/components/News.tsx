@@ -1,5 +1,6 @@
-import { Container, Typography, Grid, Card, CardMedia, CardContent } from '@mui/material';
+import { Container, Typography, Card, CardMedia, CardContent } from '@mui/material';
 import { useEffect, useState } from 'react';
+import Slider from 'react-slick'; // Importa el componente de carrusel
 
 interface Campaign {
   id: number;
@@ -33,17 +34,45 @@ const News = () => {
             setCampaigns(formattedData);
         })
         .catch(error => console.error('Error fetching campaigns:', error));
-}, []);
+  }, []);
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
 
   return (
     <Container id="noticias" maxWidth="lg" sx={{ mt: 8 }}>
       <Typography variant="h4" gutterBottom textAlign="center" sx={{ fontWeight: 'bold', mb: 4 }}>
-        Campañas
+        Noticias
       </Typography>
-      <Grid container spacing={4}>
+      <Slider {...settings} sx={{ padding: '0 16px' }}>
         {campaigns.map((campaign) => (
-          <Grid item xs={12} sm={6} md={4} key={campaign.id}>
-            <Card sx={{ boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', borderRadius: '8px' }}>
+          <div key={campaign.id} style={{ padding: '0 8px' }}> {/* Añade espacio entre los elementos */}
+            <Card
+              sx={{ boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', borderRadius: '8px' }}
+            >
               <CardMedia
                 component="img"
                 height="180"
@@ -56,7 +85,7 @@ const News = () => {
                 <Typography
                   variant="h6"
                   component="div"
-                  sx={{ fontWeight: 'bold', mb: 1 }}
+                  sx={{ fontWeight: 'bold', mb: 1, color: 'black' }} // Nombre del cliente en negro
                   data-testid={`campaign-name-${campaign.id}`}
                 >
                   {campaign.name}
@@ -78,9 +107,9 @@ const News = () => {
                 </Typography>
               </CardContent>
             </Card>
-          </Grid>
+          </div>
         ))}
-      </Grid>
+      </Slider>
     </Container>
   );
 };
