@@ -10,7 +10,7 @@ engine_sqlserver = create_engine(SQLALCHEMY_DATABASE_URL_SQLSERVER)
 SessionLocal_sqlserver = sessionmaker(autocommit=False, autoflush=False, bind=engine_sqlserver)
 
 # PostgreSQL
-SQLALCHEMY_DATABASE_URL_POSTGRES = "postgresql://user:password@localhost/dbname"
+SQLALCHEMY_DATABASE_URL_POSTGRES = "postgresql://postgres:root@localhost:5432/sales_data"
 engine_postgres = create_engine(SQLALCHEMY_DATABASE_URL_POSTGRES)
 SessionLocal_postgres = sessionmaker(autocommit=False, autoflush=False, bind=engine_postgres)
 

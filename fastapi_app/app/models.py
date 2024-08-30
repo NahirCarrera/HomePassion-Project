@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Text, DECIMAL, TIMESTAMP, ForeignKey, Identity, Float
+from sqlalchemy import Column, Integer, String, Text, DECIMAL, TIMESTAMP, ForeignKey, Identity, Float, Date
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
@@ -38,9 +38,10 @@ class PaymentMethod(Base):
     p_method_name = Column(String(255))
 
 class Sale(Base):
-    __tablename__ = "SALES"
+    __tablename__ = "sales"
+    __table_args__ = {'schema': 'public'}
     sale_id = Column(Integer, primary_key=True)
-    sale_date = Column(String(255))
+    sale_date = Column(Date)
     sale_total = Column(DECIMAL(10, 2))
     sale_status = Column(String(255))
     customer = Column(Integer)
