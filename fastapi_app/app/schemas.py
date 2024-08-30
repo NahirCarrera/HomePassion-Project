@@ -27,12 +27,13 @@ class PaymentMethodBase(BaseModel):
     p_method_name: str
 
 class SaleBase(BaseModel):
-    sale_date: str
+    sale_date: date  # Cambiado a date para reflejar el tipo de dato adecuado
     sale_total: float
     sale_status: str
     customer: int
     payment_method: int
     city: int
+
 
 # MySQL
 class CampaignBase(BaseModel):
