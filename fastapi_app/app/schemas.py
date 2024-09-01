@@ -75,3 +75,5 @@ class ProductBase(BaseModel):
 class UserBase(BaseModel):
     user_email: str
     user_password: str
+    user_name: str
+    user_rol: str

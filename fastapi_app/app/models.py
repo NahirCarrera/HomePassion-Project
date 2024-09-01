@@ -62,7 +62,7 @@ class Sale(Base):
 
 # MySQL
 class Campaign(Base):
-    __tablename__ = "CAMPAIGNS"
+    __tablename__ = "campaigns"
     campaign_id = Column(Integer, primary_key=True)
     campaign_name = Column(Text)
     start_date = Column(TIMESTAMP)

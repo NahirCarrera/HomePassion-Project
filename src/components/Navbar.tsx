@@ -23,6 +23,7 @@ const Navbar = () => {
                 <Button color="inherit" onClick={() => router.push('/campaigns')}>Noticias</Button>
                 <Button color="inherit" onClick={() => router.push('/sales')}>Ventas</Button>
                 <Button color="inherit" onClick={() => router.push('/customers')}>Clientes</Button>
+                <Button color="inherit" onClick={() => router.push('/user-profile')}>Perfil</Button>
                 <Button color="inherit" onClick={handleLogout}>Cerrar Sesión</Button>
             </Toolbar>
         </AppBar>
